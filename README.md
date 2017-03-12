@@ -72,8 +72,13 @@ graph TB
     M --> Q((child 16))
     M --> R((child 17))
 ```
-
-
+```
+graph TB
+    A{kaishi}---B(shuru)
+    B --> C[sdssd]
+    C -->|ss|D[dd]
+    C -->|dd|E[dff]
+```
 
 
 
