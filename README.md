@@ -15,5 +15,41 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
 而 session data 部分即可以保存到客户端cookie中也可以保存到服务器端的内存或数据库中，但是出于
 安全考虑session data 一般放到后端服务器而不是客户端。（可以把session存储到Redis中）
 
+***
+# 跨域Ajax post 提交数据
+## 客户端设置
+    $.ajax({
+        type: "post",
+        url: "http://localhost:8082/captcha/check",
+        xhrFields: { withCredentials: true },
+        crossDomain: true,
+        data : {"data":val},
+        success: function(data){},
+        error: function(){}
+    });
+## 服务器端设置 （使用了express库和cors库）
+    var cors = require('cors');
+    var cors_option = {
+        "origin" : ["http://localhost:8089","http://localhost:8083"],
+        "methods": "GET,POST",
+        "credentials" : true
+    };
+    app.use(cors(cors_option));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
