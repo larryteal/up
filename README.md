@@ -42,7 +42,12 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
 在数据库中建立邮箱/手机号与验证码的对应关系以 key --> value 的关系 存储。
 ## 校验验证码：
 客户端需要提供申请验证码时的key和用户输入的验证码，服务器端根据获取的key来查找value，
-并把value和用户输入的验证码进行比较。（ 比对后用一个随机数覆盖掉原来的value值，也可以对key -- value 设置一个过期时间 ）
+并把value和用户输入的验证码进行比较。
+
+（ 比对后用一个随机数覆盖掉原来的value值，也可以对key --> value 设置一个过期时间 ；
+ 浏览器图片验证码可以使用 session id 和 session data 来保存这种key --> value的对应关系；
+ 可以使 Redis 作为这种 key --> value 关系的存取数据库）
+
 
 
 
