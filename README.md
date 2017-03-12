@@ -53,7 +53,6 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
 user_id  parent_id_1 parent_id_2 parent_id_3 user_deep ...
 
 ```
-
 graph TB
     A[roo] --> B((child 1))
     A --> C((child 2))
@@ -72,7 +71,6 @@ graph TB
     M --> P((child 15))
     M --> Q((child 16))
     M --> R((child 17))
-
 ```
 
 
