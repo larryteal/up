@@ -36,6 +36,15 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
     };
     app.use(cors(cors_option));
 
+***
+# 验证码逻辑
+## 获取验证码：
+在数据库中建立邮箱/手机号与验证码的对应关系以 key --> value 的关系 存储。
+## 校验验证码：
+客户端需要提供申请验证码时的key和用户输入的验证码，服务器端根据获取的key来查找value，
+并把value和用户输入的验证码进行比较。（ 比对后用一个随机数覆盖掉原来的value值，也可以对key -- value 设置一个过期时间 ）
+
+
 
 
 
