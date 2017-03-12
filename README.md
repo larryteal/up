@@ -7,6 +7,11 @@
 body-parser无法解析 enctype="multipart/form-data" 类型的表单，同样postman在提交数据时
 数据类型要选则x-www-form-urlencoded，而不是form-data类型，如须上传文件数据，可以使用
 formidable 中间件。
+---
+# session
+session 分为两个部分 session id 和 session data 其中session id 保存到客户端的cookie中
+而 session data 部分即可以保存到客户端cookie中也可以保存到服务器端的内存或数据库中，但是出于
+安全考虑session data 一般放到后端服务器而不是客户端。（可以把session存储到Redis中）
 
 
 
