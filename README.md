@@ -50,7 +50,7 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
 
 ***
 # 三级分销系统上下级关系表设计
-user_id  parent_id_1 parent_id_2 parent_id_3 user_deep ...
+user_id &nbsp; parent_id_1 &nbsp; parent_id_2 &nbsp; parent_id_3 &nbsp; user_deep &nbsp; ...
 
 
 
