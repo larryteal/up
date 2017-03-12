@@ -48,6 +48,33 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
  浏览器图片验证码可以使用 session id 和 session data 来保存这种key --> value的对应关系；
  可以使 Redis 作为这种 key --> value 关系的存取数据库）
 
+***
+# 三级分销系统上下级关系表设计
+user_id  parent_id_1 parent_id_2 parent_id_3 user_deep ...
+
+、、、
+graph TB
+    A[roo] --> B((child 1))
+    A --> C((child 2))
+    A --> D((child 3))
+    B --> E((child 4))
+    B --> F((child 6))
+    B --> G((child 6))
+    B --> H((child 7))
+    C --> I((child 8))
+    D --> J((child 9))
+    D --> K((child 10))
+    D --> L((child 11))
+    E --> M((child 12))
+    E --> N((child 13))
+    M --> O((child 14))
+    M --> P((child 15))
+    M --> Q((child 16))
+    M --> R((child 17))
+
+
+
+
 
 
 
