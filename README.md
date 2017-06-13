@@ -51,6 +51,22 @@ session 分为两个部分 session id 和 session data 其中session id 保存�
 ***
 # 三级分销系统上下级关系表设计
 user_id &nbsp; parent_id_1 &nbsp; parent_id_2 &nbsp; parent_id_3 &nbsp; user_deep &nbsp; ...
+***
+# Centos 7 端口号管理
+### 查看已经开放的端口：
+    firewall-cmd --list-ports
+### 开启端口
+    firewall-cmd --zone=public --add-port=80/tcp --permanent
+    参数含义：
+    –zone #作用域
+    –add-port=80/tcp #添加端口，格式为：端口/通讯协议
+    –permanent #永久生效，没有此参数重启后失效
+### 防火墙启动/停止
+    重启firewall：firewall-cmd --reload
+    停止firewall：systemctl stop firewalld.service
+    禁止firewall开机启动：systemctl disable firewalld.service
+
+
 
 
 
