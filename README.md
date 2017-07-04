@@ -65,8 +65,17 @@ user_id &nbsp; parent_id_1 &nbsp; parent_id_2 &nbsp; parent_id_3 &nbsp; user_dee
     重启firewall：firewall-cmd --reload
     停止firewall：systemctl stop firewalld.service
     禁止firewall开机启动：systemctl disable firewalld.service
-
-
+***
+# Mysql
+### 添加用户
+    使用root权限登陆: mysql -u root -p
+    添加用户命令：CREATE USER '用户名'@'localhost' IDENTIFIED BY '密码';
+    用户授权命令：GRANT ALL PRIVILEGES ON *.* TO 'newuser'@'localhost';
+    //用户授权命令：GRANT ALL PRIVILEGES ON 数据库名.表名 TO 'newuser'@'localhost';
+    //刷新权限：FLUSH PRIVILEGES;
+### 删除用户
+    使用root权限登陆: mysql -u root -p
+    删除用户命令：DROP USER ‘demo’@‘localhost’;
 
 
 
