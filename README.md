@@ -76,6 +76,9 @@ user_id &nbsp; parent_id_1 &nbsp; parent_id_2 &nbsp; parent_id_3 &nbsp; user_dee
 ### 删除用户
     使用root权限登陆: mysql -u root -p
     删除用户命令：DROP USER ‘demo’@‘localhost’;
+### Mysql 注意键表注意事项
+    不要使用mysql系统关键字作为表名，例如 order,
+    会出现无法修改删除等操作，只有使用 库名.order 才能操作。（坑）
 
 
 
